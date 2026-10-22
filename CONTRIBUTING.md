@@ -37,6 +37,7 @@ cd prisma-cursos-site
 ## 2. Criando sua branch de trabalho
 
 Nunca edite ou crie códigos diretamente na branch `main`! A main é a versão oficial e estável do site. Cada funcionalidade deve ser feita na sua própria "ramificação" (branch).
+
 Antes de começar a criar qualquer coisa, certifique-se de que você está na branch `main` e que ela está atualizada:
 ```Bash
 git checkout main
@@ -56,8 +57,10 @@ git checkout -b feature/<nome-da-branch>
 ## 3. Escrevendo Código e Salvando por commits
 
 Com a sua branch criada, abra a pasta do projeto no VS Code.
+
 Crie ou altere os arquivos HTML, CSS ou JavaScript conforme a sua tarefa.
-Instale a extensão Live Server no VS Code para testar o site rodando localmente no navegador (**opcional**).
+
+Instale a extensão Live Server no VS Code para testar o site rodando localmente no navegador (**opcional** e com tutorial ao fim do documento).
 
 Quando terminar uma parte do trabalho e quiser salvá-la no histórico, verifique o que foi modificado:
 ```Bash
@@ -85,16 +88,26 @@ git push -u origin feature/nome-da-branch
 ```
 (Nas próximas vezes que fizer commit nessa mesma branch, basta digitar apenas `git push`).
 
-- Abra o Pull Request (PR):
-Acesse o repositório do projeto da Prisma Cursos no site do GitHub pelo navegador, ele vai mostrar um aviso em destaque dizendo que você fez um push recentemente, com um botão verde escrito "Compare & pull request". Clique nele.
+- **Abra o Pull Request (PR):** Acesse o repositório do projeto da Prisma Cursos no site do GitHub pelo navegador, ele vai mostrar um aviso em destaque dizendo que você fez um push recentemente, com um botão verde escrito "Compare & pull request" e clique nele.
+
 Dê um título claro ao seu Pull Request e escreva uma breve descrição do que foi feito, depois clique em `Create pull request`.
 
-- Revisão e Merge:
-Peça para um colega do grupo dar uma olhada no código clicando em reviewers no canto direito após a abertura do pull request.
+- **Revisão e Merge:** Peça para um colega do grupo dar uma olhada no código clicando em reviewers no canto direito após a abertura do pull request.
+
 Estando tudo certo, o responsável pelo repositório poderá clicar em Merge pull request para juntar o seu código na main.
 
 ## Dicas Importantes para Evitar Conflitos!
 
 - **Comunique-se com o grupo:** Sempre avise no grupo de comunicação qual Issue você está fazendo para duas pessoas não trabalharem no mesmo arquivo ao mesmo tempo.
 - **Atualize antes de começar:** No dia seguinte, antes de começar a codar de novo, lembre-se de voltar para a main (`git checkout main`), atualizar (`git pull origin main`) e depois voltar para a sua branch de trabalho!
+
 Sempre rode esses comandos acima para atualizar a main antes da criação da sua branch, para evitar conflitos posteriores e se certificar que está sempre trabalhando com a versão mais atualizada do projeto.
+
+---
+
+### Instalando a extensão Live Server
+A extensão Live Server pode ser instalada no VS code e é fornecida por: Ritwick Dey
+
+Essa extensão permite acompanhar em tempo real como está ficando a aplicação web, que é atualizada toda vez que o arquivo salva (`CTRL+S`).
+
+Para rodar basta, após instalada a extensão, clicar no botão no canto inferior direito da tela do editor VS code que diz "Go Live", então será aberto um servidor local no seu app de pesquisa padrão, como o google chrome por exemplo. Para desativar a funcionalidade basta clicar no mesmo botão novamente.
