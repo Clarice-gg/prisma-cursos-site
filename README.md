@@ -48,6 +48,7 @@ Para manter o código limpo e organizado pela equipe, o projeto segue a seguinte
 │   └── js/          # Scripts de interatividade (.javascript)
 │
 └── README.md
+```
 
 ## Responsividade
 O layout foi planejado e construído com foco em **Desktop First** e responsividade, garantindo uma experiência fluida e adaptada para:
