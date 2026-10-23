@@ -1,201 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prisma Cursos | Educação Profissionalizante</title>
-    <!-- Link para o arquivo CSS que estamos construindo -->
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-
-    <!-- =========================================
-       1. CABEÇALHO E MENU DE NAVEGAÇÃO
-       ========================================= -->
-    <header class="header-principal">
-        <div class="container-nav">
-            <nav class="menu-links">
-                <a href="#inicio">Home</a>
-                <a href="#cursos">Explorar cursos</a>
-                <a href="#planos">Nossos Planos</a>
-                <a href="#depoimentos">Depoimentos</a>
-                <a href="#contato">Contato</a>
-                <a href="#quem-somos">Quem Somos</a>
-            </nav>
-            <div class="acoes-usuario">
-                <a href="#" class="btn-entrar">Entrar</a>
-                <a href="#" class="btn-comecar">Começar agora ↗</a>
-            </div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cursos para aprender e desenvolver novas habilidades.">
+    <title>Prisma Cursos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="main-nav" aria-label="Navegação principal">
+        <form class="search" role="search">
+          <label class="sr-only" for="site-search">Buscar</label>
+          <input id="site-search" type="search" placeholder="Procurando algo?">
+        </form>
+        <ul class="nav-links">
+          <li><a href="#inicio">Home</a></li>
+          <li><a href="#cursos">Explorar cursos</a></li>
+          <li><a href="#planos">Nossos Planos</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#sobre">Quem Somos</a></li>
+        </ul>
+        <div class="account-actions">
+          <a class="login-link" href="#entrar">Entrar</a>
+          <a class="button button-dark" href="#cadastro">Começar agora <span aria-hidden="true">↗</span></a>
         </div>
+      </nav>
     </header>
 
-    <!-- =========================================
-       2. CONTEÚDO PRINCIPAL (MAIN)
-       ========================================= -->
     <main>
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Conhecimento que acompanha você</p>
+          <div class="brand-lockup">
+            <img src="assets/prisma-mark.svg" alt="">
+            <span>Prisma</span>
+          </div>
+          <h1 id="hero-title">A luz no seu Aprendizado</h1>
+          <p class="hero-description">Plataforma de concursos que traz conhecimentos do mundo todo através de um só click</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#cursos">Explorar cursos <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="#sobre">Quem Somos <span aria-hidden="true">▷</span></a>
+          </div>
+          <p class="learner-proof"><span aria-hidden="true">🟠🟣🟢</span> 12 mil+ pessoas aprendendo com a gente</p>
+        </div>
+        <div class="hero-art" aria-label="Destaque de curso e progresso de aprendizagem">
+          <article class="featured-course">
+            <p class="eyebrow">Em destaque · Design</p>
+            <h2>Crie marcas que ficam na memória</h2>
+            <div class="course-art">IDEIA</div>
+            <p>Seu progresso <strong>68%</strong></p>
+          </article>
+          <p class="course-count"><strong>+24 aulas</strong><br>nova esta semana</p>
+        </div>
+      </section>
 
-        <!-- Seção Inicial (Hero) -->
-        <section id="inicio" class="hero">
-            <span class="tag-destaque">Conhecimento que acompanha você</span>
-            <h1>A luz no seu Aprendizado <strong>Prisma</strong></h1>
-            <p>Plataforma de cursos que traz conhecimentos do mundo todo através de um só click.</p>
-            <div class="hero-botoes">
-                <a href="#cursos" class="btn-principal">Explorar cursos ↗</a>
-                <a href="#quem-somos" class="btn-secundario">Quem Somos ▷</a>
-            </div>
-            <div class="hero-stats-alunos">
-                <span>12 mil+ pessoas aprendendo com a gente</span>
-            </div>
-        </section>
+      <section class="stats" aria-label="Números da Prisma">
+        <p>Aprendizado feito<br>para a vida real</p>
+        <p><strong>120+</strong><br>cursos práticos</p>
+        <p><strong>12 mil</strong><br>alunos ativos</p>
+        <p><strong>4,9/5</strong><br>avaliação média</p>
+      </section>
 
-        <!-- Barra de Estatísticas -->
-        <section class="faixa-estatisticas">
-            <div class="estatistica-item">
-                <h3>Aprendizado feito para a vida real</h3>
-            </div>
-            <div class="estatistica-item">
-                <h4>120+</h4>
-                <p>cursos práticos</p>
-            </div>
-            <div class="estatistica-item">
-                <h4>12 mil</h4>
-                <p>alunos ativos</p>
-            </div>
-            <div class="estatistica-item">
-                <h4>4,9/5</h4>
-                <p>avaliação média</p>
-            </div>
-        </section>
+      <section class="testimonials" id="depoimentos" aria-labelledby="testimonials-title">
+        <h2 class="eyebrow" id="testimonials-title">O que nossos alunos dizem</h2>
+        <div class="testimonial-grid">
+          <blockquote>
+            <strong>Rafaela Silva:</strong>
+            <p>Excelente nível de ensino e competência dos professores</p>
+            <span aria-label="5 estrelas">★★★★★</span>
+          </blockquote>
+          <blockquote>
+            <strong>Adamastor Ferreira:</strong>
+            <p>Mudou minha vida para sempre, nunca mais vi uma aula da mesma maneira</p>
+            <span aria-label="5 estrelas">★★★★★</span>
+          </blockquote>
+          <blockquote>
+            <strong>Julia Calderano:</strong>
+            <p>Uma plataforma que me inspira a conhecer cada vez mais</p>
+            <span aria-label="5 estrelas">★★★★★</span>
+          </blockquote>
+        </div>
+      </section>
 
-        <!-- Seção de Depoimentos -->
-        <section id="depoimentos" class="secao-depoimentos">
-            <span class="tag-destaque">O que nossos alunos dizem</span>
-            <div class="grid-depoimentos">
-                <div class="card-depoimento">
-                    <strong>Rafaela Silva</strong>
-                    <p>"Excelente nível de ensino e competência dos professores"</p>
-                    <span>★★★★★</span>
-                </div>
-                <div class="card-depoimento">
-                    <strong>Adamastor Ferreira</strong>
-                    <p>"Mudou minha vida para sempre, nunca mais vi uma aula da mesma maneira"</p>
-                    <span>★★★★★</span>
-                </div>
-                <div class="card-depoimento">
-                    <strong>Julia Calderano</strong>
-                    <p>"Uma plataforma que me inspira a conhecer cada vez mais"</p>
-                    <span>★★★★★</span>
-                </div>
-            </div>
-        </section>
+      <section class="courses content-width" id="cursos" aria-labelledby="courses-title">
+        <p class="eyebrow">Sua próxima descoberta</p>
+        <h2 id="courses-title">Aprenda algo novo hoje.</h2>
+        <p>Conhecimento que vira prática — e prática que vira resultado.</p>
+        <a class="button button-dark" href="#todos-cursos">Visualizar todos os cursos</a>
+        <div class="course-grid">
+          <article class="course-card theme-indigo">
+            <p class="course-category">Design · Branding</p>
+            <h3>Uma marca com intenção.</h3>
+            <p>Design de marcas com intenção</p>
+            <p>A estratégia e o sistema visual constroem marcas que contam boas histórias.</p>
+            <footer><span>MC · com Marina Costa</span><strong>R$ 89,90</strong></footer>
+          </article>
+          <article class="course-card theme-blue">
+            <p class="course-category">Tecnologia · Dados</p>
+            <h3>Dados para decidir melhor.</h3>
+            <p>Dados para decisões melhores</p>
+            <p>Transforme planilhas e perguntas em descobertas claras para o negócio.</p>
+            <footer><span>RL · com Rafael Lima</span><strong>R$ 119,90</strong></footer>
+          </article>
+          <article class="course-card theme-teal">
+            <p class="course-category">Negócios · Criatividade</p>
+            <h3>Ideias que ganham vida.</h3>
+            <p>Ideias que viram negócio</p>
+            <p>Valide sua ideia, encontre seu público e dê forma ao próximo projeto.</p>
+            <footer><span>AS · com Ana Souza</span><strong>R$ 79,90</strong></footer>
+          </article>
+          <article class="course-card theme-slate">
+            <p class="course-category">Design · Produto</p>
+            <h3>Interfaces que acolhem.</h3>
+            <p>Interfaces que acolhem</p>
+            <p>Princípios de UX e acessibilidade para criar experiências melhores para todos.</p>
+            <footer><span>BN · com Beatriz Nunes</span><strong>R$ 99,90</strong></footer>
+          </article>
+        </div>
+      </section>
 
-        <!-- Seção de Cursos Ofertados -->
-        <section id="cursos" class="secao-cursos">
-            <span class="tag-destaque">POR ONDE COMEÇAR</span>
-            <h2>Aprenda algo novo hoje.</h2>
-            <p>Conhecimento que vira prática — e prática que vira resultado.</p>
-            
-            <div class="grid-cursos">
-                <!-- Card 1 -->
-                <div class="card-curso">
-                    <h3>Design de marcas com intenção</h3>
-                    <p>Da estratégia ao sistema visual: construa marcas que contam boas histórias.</p>
-                    <span>R$ 89,90</span>
-                </div>
-                <!-- Card 2 -->
-                <div class="card-curso">
-                    <h3>Dados para decisões melhores</h3>
-                    <p>Transforme planilhas e perguntas em descobertas claras para o negócio.</p>
-                    <span>R$ 119,90</span>
-                </div>
-                <!-- Card 3 -->
-                <div class="card-curso">
-                    <h3>Ideias que viram negócio</h3>
-                    <p>Valide sua ideia, encontre seu público e dê forma ao próximo projeto.</p>
-                    <span>R$ 79,90</span>
-                </div>
-                <!-- Card 4 -->
-                <div class="card-curso">
-                    <h3>Interfaces que acolhem</h3>
-                    <p>Princípios de UX e acessibilidade para criar experiências melhores para todos.</p>
-                    <span>R$ 99,90</span>
-                </div>
-            </div>
-        </section>
+      <section class="about content-width" id="sobre" aria-labelledby="about-title">
+        <div>
+          <p class="eyebrow">Aprender é um caminho</p>
+          <h2 id="about-title">Quem Somos?</h2>
+          <p>Somos um instituto de educação profissionalizante focado nas áreas de tecnologia, design e gestão, criado para transformar o potencial em oportunidades reais no mercado de trabalho.</p>
+        </div>
+        <a class="button button-primary" href="#sobre-nos">Saiba mais <span aria-hidden="true">↗</span></a>
+      </section>
 
-        <!-- Seção Quem Somos (Teaser) -->
-        <section id="quem-somos" class="quem-somos-teaser">
-            <span class="tag-destaque">Aprender é um caminho</span>
-            <h2>Quem Somos?</h2>
-            <p>Somos um instituto de educação profissionalizante focado nas áreas de tecnologia, design e gestão, criado para transformar o potencial em oportunidades reais no mercado de trabalho.</p>
-            <a href="#" class="btn-principal">Saiba mais ↗</a>
-        </section>
+      <section class="plans content-width" id="planos" aria-labelledby="plans-title">
+        <p class="eyebrow">Por onde começar</p>
+        <h2 id="plans-title">Nossos Planos</h2>
+        <p>Escolha entre 3 dos nossos planos ofertados abaixo</p>
+        <div class="plan-grid">
+          <article class="plan-card">
+            <h3>Plano<br>Mensal</h3>
+            <strong>R$ 80,00</strong>
+            <p>Plano mensal com uso válido de até 30 dias, que oferece as vantagens básicas:</p>
+            <ul>
+              <li>Acesso à área de usuário personalizada</li>
+              <li>10 cursos extras de áreas diversas</li>
+              <li>Prova avaliativa ao fim do curso</li>
+            </ul>
+            <a class="button button-primary" href="#cadastro">Cadastre-se <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="plan-card">
+            <h3>Plano<br>Semestral</h3>
+            <strong>R$ 440,00</strong>
+            <p>Plano semestral com uso válido de até 180 dias, que oferece as vantagens intermediárias:</p>
+            <ul>
+              <li>Acesso à área de usuário personalizada</li>
+              <li>30 cursos extras de áreas diversas</li>
+              <li>Prova avaliativa ao fim do curso</li>
+              <li>Apostila didática ao fim de cada aula</li>
+            </ul>
+            <a class="button button-primary" href="#cadastro">Cadastre-se <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="plan-card">
+            <h3>Plano<br>Anual</h3>
+            <strong>R$ 880,00</strong>
+            <p>Plano anual com uso válido de até 360 dias, que oferece as vantagens avançadas:</p>
+            <ul>
+              <li>Acesso à área de usuário personalizada</li>
+              <li>30 cursos extras de áreas diversas</li>
+              <li>Prova avaliativa ao fim do curso</li>
+              <li>Apostila didática ao fim de cada aula</li>
+              <li>Aula online semanal com profissionais na área</li>
+            </ul>
+            <a class="button button-primary" href="#cadastro">Cadastre-se <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </section>
 
-        <!-- Seção de Planos de Compra -->
-        <section id="planos" class="secao-planos">
-            <span class="tag-destaque">NOSSOS PLANOS</span>
-            <h2>Escolha entre 3 dos nossos planos ofertados</h2>
-            <div class="grid-planos">
-                <div class="card-plano">
-                    <h3>Plano Mensal</h3>
-                    <p>R$ 80,00</p>
-                    <p>Uso válido de até 30 dias. Acesso à área personalizada e 10 cursos extras.</p>
-                    <a href="#" class="btn-principal">Cadastre-se ↗</a>
-                </div>
-                <div class="card-plano">
-                    <h3>Plano Semestral</h3>
-                    <p>R$ 440,00</p>
-                    <p>Uso válido de até 180 dias. Vantagens intermediárias e apostilas inclusas.</p>
-                    <a href="#" class="btn-principal">Cadastre-se ↗</a>
-                </div>
-                <div class="card-plano">
-                    <h3>Plano Anual</h3>
-                    <p>R$ 880,00</p>
-                    <p>Uso válido de até 360 dias. 30 cursos extras e aulas online semanais com profissionais.</p>
-                    <a href="#" class="btn-principal">Cadastre-se ↗</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de Contato -->
-        <section id="contato" class="secao-contato">
-            <h2>Vamos conversar?</h2>
-            <form>
-                <label>Nome completo</label>
-                <input type="text" placeholder="Digite seu nome completo" required>
-
-                <label>E-mail</label>
-                <input type="email" placeholder="Digite seu e-mail" required>
-
-                <label>Mensagem adicional</label>
-                <textarea placeholder="Como podemos ajudar você?" required></textarea>
-
-                <button type="submit" class="btn-principal">Enviar mensagem</button>
-            </form>
-        </section>
-
+      <section class="contact content-width" id="contato" aria-labelledby="contact-title">
+        <h2 id="contact-title">Vamos conversar?</h2>
+        <form action="#" method="post">
+          <label for="name">Nome completo</label>
+          <input id="name" name="name" type="text" placeholder="Digite seu nome completo">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="Digite seu e-mail">
+          <label for="message">Mensagem adicional</label>
+          <textarea id="message" name="message" placeholder="Como podemos ajudar você?"></textarea>
+          <button class="button button-primary" type="submit">Enviar mensagem</button>
+        </form>
+      </section>
     </main>
 
-    <!-- =========================================
-       3. RODAPÉ (FOOTER)
-       ========================================= -->
-    <footer>
-        <div class="footer-conteudo">
-            <div class="footer-info">
-                <h3>Prisma Cursos</h3>
-                <p>Aprender abre caminhos. Vamos descobrir o seu?</p>
-            </div>
-            <div class="footer-contato">
-                <h4>Fale Conosco</h4>
-                <p>E-mail: prismacursos@contato.com.br</p>
-                <p>Telefone: (61) 90000-0009</p>
-                <p>Instagram: @prisma_cursos</p>
-                <p>Facebook: prisma_cursos</p>
-            </div>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <a class="footer-brand" href="#inicio">
+            <img src="assets/prisma-mark.svg" alt="">
+            <span>Prisma Cursos</span>
+          </a>
+          <p>Aprender abre caminhos.<br>Vamos descobrir o seu?</p>
         </div>
+        <address>
+          <strong>Fale Conosco</strong>
+          <a href="mailto:prismacursos@contato.com.br">prismacursos@contato.com.br</a>
+          <a href="tel:+5561900000009">(61) 90000-0009</a>
+          <span>Instagram: @prisma_cursos</span>
+          <span>Facebook: prisma_cursos</span>
+        </address>
+      </div>
     </footer>
-
-    <!-- Script JavaScript -->
-    <script src="../js/script.js"></script>
-</body>
+  </body>
 </html>
