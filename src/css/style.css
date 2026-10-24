@@ -57,7 +57,7 @@ img {
 }
 .coruja-img {
     width: 260px;
-    height: 280px;
+    height: auto;
     border-radius: 8px;
 }
 
@@ -806,4 +806,147 @@ img {
     margin: 0 auto;
     opacity: 0.8;
     transform: rotate(-1deg);
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+body {
+    overflow-x: hidden; /* Corta qualquer conteúdo que vazar para os lados */
+}
+
+/* Por padrão, no computador, o botão do menu fica invisível */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--color-ink);
+}
+
+/* Regras para Telas Menores (até 768px) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostra o botão no celular */
+    }
+
+    .nav-links {
+        display: none; 
+        position: absolute;
+        top: 82px;
+        left: 0;
+        width: 100%;
+        background: var(--color-page);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 30px;
+        border-bottom: 1px solid var(--color-border);
+        box-shadow: 0 10px 25px rgba(0, 27, 41, 0.08);
+        gap: 16px;
+    }
+
+    /* Classe que o JavaScript vai ativar para mostrar o menu */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .quem-somos-hero {
+      background: #e2f5f3;
+      border-radius: 25px;
+      padding: 40px 30px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 50px;
+    }
+    .quem-somos-hero h1 {
+        font-family: var(--font-heading);
+        font-size: 35px;
+        font-weight: 800;
+        color: var(--color-heading);
+        margin: 0 0 10px 0;
+    }
+    .quem-somos-hero::after {
+        content: "";
+        position: absolute;
+        right: -40px;
+        top: -60px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid rgba(77, 212, 205, 0.53);
+        border-radius: 50%;
+        box-shadow: 0 0 0 30px rgba(77, 212, 205, 0.12), 0 0 0 65px rgba(77, 212, 205, 0.08);
+    }
+
+    .quem-somos-apresentacao {
+        text-align: center;
+        gap: 20px;
+    }
+
+    .mascote-container img {
+        width: 180px;
+        margin: 0 auto;
+    }
+
+    .textos-apresentacao {
+        width: 100%;
+    }
+
+    .destaque-principal {
+        font-size: 20px;
+    }
+
+    .texto-secundario {
+        font-size: 15px;
+    }
+
+    .missao-valores-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 60px 0;
+    }
+
+    .card-institucional {
+        padding: 25px 20px;
+    }
+
+    .card-institucional h2 {
+        font-size: 26px;
+    }
+
+    .card-institucional p, 
+    .card-institucional strong {
+        font-size: 14px;
+    }
+
+    .cta-gamificacao-qs h2 {
+        font-family: var(--font-heading);
+        font-size: 26px;
+        font-weight: 800;
+        color: var(--color-heading);
+        max-width: 800px;
+        margin: 0 auto 10px auto;
+        line-height: 1.3;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font: 600 20px var(--font-heading);
+    }
+    .footer-brand img {
+      width: 38px;
+      height: 32px;
+      background: #eaf0ef;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .missao-valores-grid {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 }
