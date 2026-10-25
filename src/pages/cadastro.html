@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrismaCursos - Criar Conta</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="logo">
+            <span class="simbolo">▲</span>
+            <span>PrismaCursos</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="introducao">
+            <h1>CRIE SUA CONTA</h1>
+            <p>SUA PRÓXIMA CONQUISTA COMEÇA AQUI.</p>
+        </section>
+
+        <div class="conteudo">
+
+            <section class="cartao">
+                <form id="formCadastro">
+
+                    <div class="campo">
+                        <label for="nome">Nome completo</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome completo"
+                            required
+                        >
+                        <small id="erroNome"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            required
+                        >
+                        <small id="erroEmail"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="(00) 00000-0000"
+                            maxlength="15"
+                            required
+                        >
+                        <small id="erroTelefone"></small>
+                    </div>
+
+                    <div class="senhas">
+                        <div class="campo">
+                            <label for="senha">Senha</label>
+                            <input
+                                type="password"
+                                id="senha"
+                                name="senha"
+                                placeholder="Crie uma senha"
+                                required
+                            >
+                            <small id="erroSenha"></small>
+                        </div>
+
+                        <div class="campo">
+                            <label for="confirmarSenha">Confirmar senha</label>
+                            <input
+                                type="password"
+                                id="confirmarSenha"
+                                name="confirmarSenha"
+                                placeholder="Confirme sua senha"
+                                required
+                            >
+                            <small id="erroConfirmarSenha"></small>
+                        </div>
+                    </div>
+
+                    <button type="submit">Criar minha conta</button>
+
+                    <p id="mensagem" role="status"></p>
+
+                </form>
+            </section>
+
+            <aside class="ilustracoes">
+
+                <div class="curso programacao">
+                    <strong>Programação</strong>
+                    <span class="play">▶</span>
+                    <div class="linha"></div>
+                    <div class="linha curta"></div>
+                </div>
+
+                <div class="curso marketing">
+                    <strong>Marketing Digital</strong>
+                    <span class="play">▶</span>
+                    <div class="linha"></div>
+                    <div class="linha curta"></div>
+                </div>
+
+                <div class="ilustracao">
+                    <div class="livros">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <div class="capelo">◆</div>
+
+                    <div class="tela">
+                        <div class="tela-interna"></div>
+                    </div>
+
+                    <div class="teclado"></div>
+                </div>
+
+                <div class="curso militares">
+                    <strong>Militares</strong>
+                    <span class="play">▶</span>
+                    <div class="linha"></div>
+                    <div class="linha curta"></div>
+                </div>
+
+            </aside>
+        </div>
+    </main>
+
+    <footer></footer>
+
+</body>
+</html>
