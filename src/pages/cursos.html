@@ -13,7 +13,32 @@
 </head>
 <body>
 
-    
+    <!-- =========================================
+       1. CABEÇALHO / MENU DE NAVEGAÇÃO
+       ========================================= -->
+    <header class="site-header">
+        <div class="main-nav">
+            <a href="index.html" class="logo-link">
+                <img src="../imagens/logo-prisma-cursos.png" alt="Logo Prisma" class="logo-img"> Prisma
+            </a>
+
+            <!-- Botão do Menu (Mobile) -->
+            <button class="menu-toggle" aria-label="Abrir menu">
+                ☰
+            </button>
+
+            <!-- Links de Navegação -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cursos.html" class="link-ativo">Explorar cursos</a></li>
+                <li><a href="index.html#planos">Nossos Planos</a></li>
+                <li><a href="index.html#depoimentos">Depoimentos</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+                <li><a href="quem_somos.html">Quem Somos</a></li>
+            </ul>
+        </div>
+    </header>
+
     <!-- =========================================
        2. CONTEÚDO PRINCIPAL (CURSOS OFERTADOS)
        ========================================= -->
@@ -168,6 +193,27 @@
 
     </main>
 
+    <!-- =========================================
+       3. RODAPÉ
+       ========================================= -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <a class="footer-brand" href="#inicio">
+            <img src="../imagens/logo-prisma-cursos.png" alt="Logo Prisma Cursos" class="logo-img">
+            <span>Prisma Cursos</span>
+          </a>
+          <p>Aprender abre caminhos.<br>Vamos descobrir o seu?</p>
+        </div>
+        <address>
+          <strong>Fale Conosco</strong>
+          <a href="mailto:prismacursos@contato.com.br">prismacursos@contato.com.br</a>
+          <a href="tel:+5561900000009">(61) 90000-0009</a>
+          <span>Instagram: @prisma_cursos</span>
+          <span>Facebook: prisma_cursos</span>
+        </address>
+      </div>
+    </footer>
 
     <script src="../js/script.js"></script>
 </body>
