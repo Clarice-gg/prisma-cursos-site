@@ -9,12 +9,18 @@
     <script src="../js/script.js" defer></script>
   </head>
   <body>
-    <header class="site-header">
-      <nav class="main-nav" aria-label="Navegação principal">
+
+  <header class="site-header">
+    <nav class="main-nav" aria-label="Navegação principal">
+
       <form class="search" role="search" id="searchForm">
         <label class="sr-only" for="site-search">Buscar</label>
         <input id="site-search" type="search" placeholder="Procurando algo?" autocomplete="off">
       </form>
+
+      <button class="menu-toggle" aria-label="Abrir menu mobile">☰</button>
+
+      <div class="nav-menu">
         <ul class="nav-links">
           <li><a href="#inicio">Home</a></li>
           <li><a href="#cursos">Explorar cursos</a></li>
@@ -23,12 +29,14 @@
           <li><a href="#contato">Contato</a></li>
           <li><a href="#sobre">Quem Somos</a></li>
         </ul>
+        
         <div class="account-actions">
           <a class="login-link" href="#entrar">Entrar</a>
           <a class="button button-dark" href="#cadastro">Começar agora <span aria-hidden="true">↗</span></a>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
     <main>
       <section class="hero" id="inicio" aria-labelledby="hero-title">
