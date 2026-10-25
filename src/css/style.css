@@ -1181,3 +1181,31 @@ body {
     height: 35px;
     border-radius: 4px;
 }
+
+@media (max-width: 768px) {
+  .grid-cursos-horizontal {
+    grid-auto-columns: 270px;
+    gap: 16px;
+  }
+  .card-curso {
+    height: 370px;
+  }
+  .card-topo h3 {
+    font-size: 19px;
+  }
+  .card-conteudo h4 {
+    font-size: 15px;
+  }
+  .card-conteudo p {
+    font-size: 11px;
+  }
+  .titulo-cursos h1 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .titulo-cursos h1 {
+    font-size: 40px;
+  }
+}
