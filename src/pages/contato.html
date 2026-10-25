@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Prisma Cursos</title>
+    <link rel="stylesheet" href="../css/contato.css">
+    <script src="../js/scriptcontato.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="../../index.html" class="logo">Prisma<span>Cursos</span></a>
+
+        <nav class="menu" id="menu">
+            <a href="../../index.html">Início</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="contato.html" class="ativo">Contato</a>
+        </nav>
+
+        <button class="menu-toggle" id="menu-toggle"
+                aria-label="Abrir menu" aria-expanded="false">
+            ☰
+        </button>
+    </header>
+
+    <main class="conteudo">
+        <section class="introducao">
+            <p class="subtitulo">FALE CONOSCO</p>
+            <h1>Como podemos ajudar?</h1>
+            <p>Envie sua mensagem. Será um prazer conversar com você!</p>
+        </section>
+
+        <section class="cartao-contato">
+            <div class="informacoes">
+                <h2>Entre em contato</h2>
+                <p>Preencha o formulário ao lado para enviar sua dúvida ou sugestão.</p>
+
+                <div class="informacao">
+                    <span>✉</span>
+                    <div>
+                        <strong>E-mail</strong>
+                        <p>Entre em contato com nossa equipe.</p>
+                    </div>
+                </div>
+
+                <div class="informacao">
+                    <span>💬</span>
+                    <div>
+                        <strong>Atendimento</strong>
+                        <p>Estamos aqui para ajudar você.</p>
+                    </div>
+                </div>
+            </div>
+
+            <form id="form-contato">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome"
+                       placeholder="Digite seu nome" required minlength="2">
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email"
+                       placeholder="seuemail@exemplo.com" required>
+
+                <label for="assunto">Assunto</label>
+                <select id="assunto" name="assunto" required>
+                    <option value="">Selecione um assunto</option>
+                    <option value="cursos">Informações sobre cursos</option>
+                    <option value="matricula">Matrícula</option>
+                    <option value="pagamento">Pagamento</option>
+                    <option value="outro">Outro assunto</option>
+                </select>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem"
+                          placeholder="Escreva sua mensagem..."
+                          rows="5" required minlength="10"></textarea>
+
+                <button type="submit" class="botao-enviar">
+                    Enviar mensagem
+                </button>
+
+                <p id="status-form" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>© 2026 Prisma Cursos. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
