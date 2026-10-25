@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
 /*estilo geral do site*/
 :root {
   --color-ink: #001b29;
@@ -125,6 +126,79 @@ img {
 }
 
 /*hero*/
+.hero {
+  position: relative;
+  min-height: 588.8px;
+  padding: 70px max(24px, calc((100% - 1180px) / 2));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 32px;
+  overflow: hidden;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 590px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--color-heading);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.45px;
+  text-transform: uppercase;
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 74px;
+  margin-bottom: 4px;
+  font: 800 64px/1 var(--font-heading);
+}
+
+.brand-lockup img {
+  width: 76px;
+  height: 66px;
+  object-fit: contain;
+  background: #eaf0ef;
+}
+
+.hero-description {
+  max-width: 490px;
+  margin: 20px 0 0;
+  color: #4c6169;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.learner-proof {
+  margin: 22px 0 0;
+  color: #42565e;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero-title {
+  margin: 0;
+  color: var(--color-heading);
+  font-family: var(--font-heading);
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.28;
+}
+
 .hero-art {
   position: relative;
   z-index: 1;
@@ -245,11 +319,11 @@ img {
 .course-count {
   position: absolute;
   z-index: 2;
-  right: 0;
-  bottom: 44px;
+  left: 68%;
+  right: auto;
+  bottom: 20%;
   min-width: 150px;
   padding: 16px 18px 16px 62px;
-  font-size: 12px;
   transform: rotate(-3deg);
 }
 
