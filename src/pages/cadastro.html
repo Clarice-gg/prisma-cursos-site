@@ -4,31 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crie sua conta na PrismaCursos e comece sua jornada de aprendizado.">
+
     <title>PrismaCursos - Criar Conta</title>
 
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/script.js" defer></script>
+    <script src="../js/scriptcadastro.js" defer></script>
 </head>
-<body>
 
+<body>
     <header class="cabecalho">
-        <div class="logo">
+        <a class="logo" href="#inicio" aria-label="PrismaCursos - início">
             <span class="simbolo">▲</span>
             <span>PrismaCursos</span>
-        </div>
+        </a>
+
+        <form class="busca" id="formBusca" role="search">
+            <input
+                type="search"
+                id="campoBusca"
+                placeholder="Buscar um curso..."
+                aria-label="Buscar um curso"
+            >
+            <button type="submit" aria-label="Pesquisar">⌕</button>
+        </form>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="menuNavegacao"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="menu-navegacao" id="menuNavegacao" aria-label="Navegação principal">
+            <a href="#inicio">Início</a>
+            <a href="#cursos">Cursos</a>
+            <a href="#rodape">Contato</a>
+            <a class="botao-comecar" href="#formCadastro">Começar agora</a>
+        </nav>
     </header>
 
     <main>
-        <section class="introducao">
+        <section class="introducao" id="inicio">
             <h1>CRIE SUA CONTA</h1>
             <p>SUA PRÓXIMA CONQUISTA COMEÇA AQUI.</p>
         </section>
 
         <div class="conteudo">
-
-            <section class="cartao">
-                <form id="formCadastro">
-
+            <section class="cartao" aria-label="Formulário de cadastro">
+                <form id="formCadastro" novalidate>
                     <div class="campo">
                         <label for="nome">Nome completo</label>
                         <input
@@ -36,6 +66,7 @@
                             id="nome"
                             name="nome"
                             placeholder="Digite seu nome completo"
+                            autocomplete="name"
                             required
                         >
                         <small id="erroNome"></small>
@@ -48,6 +79,7 @@
                             id="email"
                             name="email"
                             placeholder="Digite seu e-mail"
+                            autocomplete="email"
                             required
                         >
                         <small id="erroEmail"></small>
@@ -60,6 +92,7 @@
                             id="telefone"
                             name="telefone"
                             placeholder="(00) 00000-0000"
+                            autocomplete="tel"
                             maxlength="15"
                             required
                         >
@@ -74,6 +107,7 @@
                                 id="senha"
                                 name="senha"
                                 placeholder="Crie uma senha"
+                                autocomplete="new-password"
                                 required
                             >
                             <small id="erroSenha"></small>
@@ -86,36 +120,37 @@
                                 id="confirmarSenha"
                                 name="confirmarSenha"
                                 placeholder="Confirme sua senha"
+                                autocomplete="new-password"
                                 required
                             >
                             <small id="erroConfirmarSenha"></small>
                         </div>
                     </div>
 
-                    <button type="submit">Criar minha conta</button>
+                    <button class="botao-cadastro" type="submit">
+                        Criar minha conta
+                    </button>
 
-                    <p id="mensagem" role="status"></p>
-
+                    <p id="mensagem" role="status" aria-live="polite"></p>
                 </form>
             </section>
 
-            <aside class="ilustracoes">
-
+            <aside class="ilustracoes" id="cursos" aria-label="Exemplos de áreas de cursos">
                 <div class="curso programacao">
                     <strong>Programação</strong>
-                    <span class="play">▶</span>
+                    <span class="play" aria-hidden="true">▶</span>
                     <div class="linha"></div>
                     <div class="linha curta"></div>
                 </div>
 
                 <div class="curso marketing">
                     <strong>Marketing Digital</strong>
-                    <span class="play">▶</span>
+                    <span class="play" aria-hidden="true">▶</span>
                     <div class="linha"></div>
                     <div class="linha curta"></div>
                 </div>
 
-                <div class="ilustracao">
+                <div class="ilustracao" aria-hidden="true">
                     <div class="livros">
                         <div></div>
                         <div></div>
@@ -134,16 +169,34 @@
 
                 <div class="curso militares">
                     <strong>Militares</strong>
-                    <span class="play">▶</span>
+                    <span class="play" aria-hidden="true">▶</span>
                     <div class="linha"></div>
                     <div class="linha curta"></div>
                 </div>
-
             </aside>
         </div>
     </main>
 
-    <footer></footer>
+    <footer class="site-footer" id="rodape">
+        <div class="footer-conteudo">
+            <div class="footer-marca">
+                <a class="logo" href="#inicio">
+                    <span class="simbolo">▲</span>
+                    <span>PrismaCursos</span>
+                </a>
+                <p>Aprenda hoje. Conquiste o amanhã.</p>
+            </div>
 
+            <nav class="footer-links" aria-label="Links do rodapé">
+                <a href="#inicio">Início</a>
+                <a href="#cursos">Cursos</a>
+                <a href="#formCadastro">Criar conta</a>
+            </nav>
+        </div>
+
+        <div class="footer-final">
+            <p>&copy; 2026 PrismaCursos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
