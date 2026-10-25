@@ -75,6 +75,8 @@ img {
   font-size: 14px;
   font-weight: 700;
   white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
 }
 .button-primary {
   color: var(--color-ink);
@@ -94,6 +96,12 @@ img {
 }
 .button:hover {
   filter: brightness(0.96);
+}
+.button.enviado {
+    background: #c5f1ec;
+    color: var(--color-heading);
+    cursor: default;
+    opacity: 1;
 }
 
 /*cabeçalho*/
@@ -465,7 +473,7 @@ img {
   position: relative;
   display: flex;
   align-items: flex-start;
-  color: #263b47;
+  color: var(--color-white);
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
@@ -485,7 +493,7 @@ img {
 }
 
 .course-card > .course-category::after {
-  content: "♧";
+  content: "☆";
   position: absolute;
   top: 12px;
   right: 16px;
@@ -705,6 +713,12 @@ img {
   cursor: pointer;
   letter-spacing: 1px;
 }
+textarea {
+    resize: none;
+    height: 130px;
+    padding-top: 12px;
+    font-family: inherit;
+}
 
 /*footer*/
 .site-footer {
@@ -774,6 +788,7 @@ img {
     border: 1px solid rgba(77, 212, 205, 0.53);
     border-radius: 50%;
     box-shadow: 0 0 0 30px rgba(77, 212, 205, 0.12), 0 0 0 65px rgba(77, 212, 205, 0.08);
+    pointer-events: none;
 }
 
 .quem-somos-hero .tag-pequena {
@@ -807,6 +822,51 @@ img {
     color: var(--color-muted);
     font-size: 16px;
     margin: 0;
+}
+
+.quem-somos-hero.content-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: var(--content-width);
+    margin-inline: auto;
+    border-radius: 20px;
+    padding: 44px 48px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.quem-somos-conteudo {
+    max-width: 760px;
+}
+
+.quem-somos-hero h2 {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--color-heading);
+    margin: 10px 0 15px 0;
+    line-height: 1.1;
+}
+
+.quem-somos-hero p {
+    color: var(--color-muted);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .quem-somos-hero.content-width {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 20px;
+    }
+    
+    .quem-somos-hero h2 {
+        font-size: 32px;
+    }
 }
 
 /* 2. Apresentação */

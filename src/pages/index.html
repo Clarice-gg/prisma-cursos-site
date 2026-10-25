@@ -11,10 +11,10 @@
   <body>
     <header class="site-header">
       <nav class="main-nav" aria-label="Navegação principal">
-        <form class="search" role="search">
-          <label class="sr-only" for="site-search">Buscar</label>
-          <input id="site-search" type="search" placeholder="Procurando algo?">
-        </form>
+      <form class="search" role="search" id="searchForm">
+        <label class="sr-only" for="site-search">Buscar</label>
+        <input id="site-search" type="search" placeholder="Procurando algo?" autocomplete="off">
+      </form>
         <ul class="nav-links">
           <li><a href="#inicio">Home</a></li>
           <li><a href="#cursos">Explorar cursos</a></li>
@@ -35,7 +35,7 @@
         <div class="hero-copy">
           <p class="eyebrow">Conhecimento que acompanha você</p>
           <div class="brand-lockup">
-            <img src="assets/prisma-mark.svg" alt="">
+            <img src="../imagens/logo-prisma-cursos.png" alt="Prisma Cursos">
             <span>Prisma</span>
           </div>
          <h1 class="hero-title" id="hero-title">A luz no seu Aprendizado</h1>
@@ -89,7 +89,7 @@
         <p class="eyebrow">Sua próxima descoberta</p>
         <h2 id="courses-title">Aprenda algo novo hoje.</h2>
         <p>Conhecimento que vira prática — e prática que vira resultado.</p>
-        <a class="button button-dark" href="#todos-cursos">Visualizar todos os cursos</a>
+        <a class="button button-dark-blue" href="../pages/cursos.html">Visualizar todos os cursos</a>
         <div class="course-grid">
 
             <article class="course-card theme-indigo">
@@ -177,14 +177,15 @@
         </article>
 
         </div>
-      </section>
-      <section class="about content-width" id="sobre" aria-labelledby="about-title">
-        <div>
-          <p class="eyebrow">Aprender é um caminho</p>
-          <h2 id="about-title">Quem Somos?</h2>
-          <p>Somos um instituto de educação profissionalizante focado nas áreas de tecnologia, design e gestão, criado para transformar o potencial em oportunidades reais no mercado de trabalho.</p>
-        </div>
-        <a class="button button-primary" href="#sobre-nos">Saiba mais <span aria-hidden="true">↗</span></a>
+      <section class="quem-somos-hero content-width" id="sobre" aria-labelledby="about-title">
+          <div class="quem-somos-conteudo">
+              <div class="tag-pequena">
+                  <span class="ponto-verde"></span> APRENDER É UM CAMINHO
+              </div>
+              <h2 id="about-title">Quem Somos?</h2>
+              <p>Somos um instituto de educação profissionalizante focado nas áreas de tecnologia, design e gestão, criado para transformar o potencial em oportunidades reais no mercado de trabalho.</p>
+          </div>
+          <a class="button button-primary" href="quem_somos.html">Saiba mais <span aria-hidden="true">↗</span></a>
       </section>
 
       <section class="plans content-width" id="planos" aria-labelledby="plans-title">
@@ -244,25 +245,27 @@
   </article>
 </div>
 
-      <section class="contact content-width" id="contato" aria-labelledby="contact-title">
-        <h2 id="contact-title">Vamos conversar?</h2>
-        <form action="#" method="post">
-          <label for="name">Nome completo</label>
-          <input id="name" name="name" type="text" placeholder="Digite seu nome completo">
-          <label for="email">E-mail</label>
-          <input id="email" name="email" type="email" placeholder="Digite seu e-mail">
-          <label for="message">Mensagem adicional</label>
-          <textarea id="message" name="message" placeholder="Como podemos ajudar você?"></textarea>
-          <button class="button button-primary" type="submit">Enviar mensagem</button>
-        </form>
-      </section>
+  <section class="contact content-width" id="contato" aria-labelledby="contact-title">
+      <h2 id="contact-title">Vamos conversar?</h2>
+      
+      <form id="contactForm">
+        <label for="name">Nome completo</label>
+        <input id="name" name="name" type="text" placeholder="Digite seu nome completo" required>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" placeholder="Digite seu e-mail" required>
+        <label for="message">Mensagem adicional</label>
+        <textarea id="message" name="message" placeholder="Como podemos ajudar você?" required></textarea>
+        <button class="button button-primary" id="submitBtn" type="submit">Enviar mensagem</button>
+      </form>
+  </section>
+
     </main>
 
     <footer class="site-footer">
       <div class="footer-inner">
         <div>
           <a class="footer-brand" href="#inicio">
-            <img src="assets/prisma-mark.svg" alt="">
+            <img src="../imagens/logo-prisma-cursos.png" alt="Logo Prisma Cursos" class="logo-img">
             <span>Prisma Cursos</span>
           </a>
           <p>Aprender abre caminhos.<br>Vamos descobrir o seu?</p>
