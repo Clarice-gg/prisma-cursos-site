@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar Cursos | Prisma Cursos</title>
+    <!-- Importação das fontes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- =========================================
+       1. CABEÇALHO / MENU DE NAVEGAÇÃO
+       ========================================= -->
+    <header class="site-header">
+        <div class="main-nav">
+            <a href="index.html" class="logo-link">
+                <img src="../imagens/logo-prisma-cursos.png" alt="Logo Prisma" class="logo-img"> Prisma
+            </a>
+
+            <!-- Botão do Menu (Mobile) -->
+            <button class="menu-toggle" aria-label="Abrir menu">
+                ☰
+            </button>
+
+            <!-- Links de Navegação -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cursos.html" class="link-ativo">Explorar cursos</a></li>
+                <li><a href="index.html#planos">Nossos Planos</a></li>
+                <li><a href="index.html#depoimentos">Depoimentos</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+                <li><a href="quem_somos.html">Quem Somos</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- =========================================
+       2. CONTEÚDO PRINCIPAL (CURSOS OFERTADOS)
+       ========================================= -->
+    <main class="content-width pagina-cursos">
+
+        <section class="titulo-cursos">
+            <h1>Conheça os cursos que oferecemos <br>aqui na plataforma</h1>
+        </section>
+
+        <section class="secao-carrossel-cursos">
+            <!-- Botão de Rolagem Esquerda -->
+            <button class="btn-scroll btn-prev" aria-label="Rolar para esquerda">‹</button>
+            
+            <div class="grid-cursos-horizontal" id="cursosScroll">
+                <!-- Card 1 -->
+                <div class="card-curso">
+                    <div class="card-topo bg-azul-escuro">
+                        <span class="card-tag">Design · Branding</span>
+                        <h3>Uma marca<br>com intenção.</h3>
+                    </div>
+                    <div class="card-conteudo">
+                        <div>
+                            <div class="card-infos">
+                                <span>8 aulas · 3h 20min</span>
+                                <span class="card-rating">★ 4,9 (238)</span>
+                            </div>
+                            <h4>Design de marcas com intenção</h4>
+                            <p>Da estratégia ao sistema visual: construa marcas que contam boas histórias.</p>
+                        </div>
+                        <div class="card-professor">
+                            <div class="avatar bg-azul-claro text-azul-escuro">MC</div>
+                            <span>com <strong>Marina Costa</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-curso">
+                    <div class="card-topo bg-cyan">
+                        <span class="card-tag">Tecnologia · Dados</span>
+                        <h3>Dados para<br>decidir melhor.</h3>
+                    </div>
+                    <div class="card-conteudo">
+                        <div>
+                            <div class="card-infos">
+                                <span>12 aulas · 5h 10min</span>
+                                <span class="card-rating">★ 4,8 (164)</span>
+                            </div>
+                            <h4>Dados para decisões melhores</h4>
+                            <p>Transforme planilhas e perguntas em descobertas claras para o negócio.</p>
+                        </div>
+                        <div class="card-professor">
+                            <div class="avatar bg-verde-claro text-verde-escuro">RL</div>
+                            <span>com <strong>Rafael Lima</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-curso">
+                    <div class="card-topo bg-verde-escuro text-white">
+                        <span class="card-tag">Negócios · Criatividade</span>
+                        <h3>Ideias que<br>ganham vida.</h3>
+                    </div>
+                    <div class="card-conteudo">
+                        <div>
+                            <div class="card-infos">
+                                <span>6 aulas · 2h 45min</span>
+                                <span class="card-rating">★ 5,0 (91)</span>
+                            </div>
+                            <h4>Ideias que viram negócio</h4>
+                            <p>Valide sua ideia, encontre seu público e dê forma ao próximo projeto.</p>
+                        </div>
+                        <div class="card-professor">
+                            <div class="avatar bg-laranja text-vermelho">AS</div>
+                            <span>com <strong>Ana Souza</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card-curso">
+                    <div class="card-topo bg-azul-escuro">
+                        <span class="card-tag">Design · Produto</span>
+                        <h3>Interfaces<br>que acolhem.</h3>
+                    </div>
+                    <div class="card-conteudo">
+                        <div>
+                            <div class="card-infos">
+                                <span>10 aulas · 4h 05min</span>
+                                <span class="card-rating">★ 4,9 (127)</span>
+                            </div>
+                            <h4>Interfaces que acolhem</h4>
+                            <p>Principíos de UX e acessibilidade para criar experiências melhores para todos.</p>
+                        </div>
+                        <div class="card-professor">
+                            <div class="avatar bg-roxo text-roxo-escuro">BN</div>
+                            <span>com <strong>Beatriz Nunes</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card-curso">
+                    <div class="card-topo bg-cyan">
+                        <span class="card-tag">Programação · Web</span>
+                        <h3>Código limpo<br>para a web.</h3>
+                    </div>
+                    <div class="card-conteudo">
+                        <div>
+                            <div class="card-infos">
+                                <span>14 aulas · 6h 30min</span>
+                                <span class="card-rating">★ 5,0 (310)</span>
+                            </div>
+                            <h4>Desenvolvimento Front-end</h4>
+                            <p>Domine HTML5, CSS3 e JavaScript criando interfaces reais e responsivas.</p>
+                        </div>
+                        <div class="card-professor">
+                            <div class="avatar bg-azul-claro text-azul-escuro">CG</div>
+                            <span>com <strong>Carlos Gomes</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card-curso">
+                    <div class="card-topo bg-verde-escuro text-white">
+                        <span class="card-tag">Gestão · Projetos</span>
+                        <h3>Liderança<br>e estratégia.</h3>
+                    </div>
+                    <div class="card-conteudo">
+                        <div>
+                            <div class="card-infos">
+                                <span>8 aulas · 3h 50min</span>
+                                <span class="card-rating">★ 4,7 (145)</span>
+                            </div>
+                            <h4>Gestão Ágil de Projetos</h4>
+                            <p>Aprenda metodologias ágeis e conduza equipes de tecnologia ao sucesso.</p>
+                        </div>
+                        <div class="card-professor">
+                            <div class="avatar bg-laranja text-vermelho">PR</div>
+                            <span>com <strong>Patrícia Ramos</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Botão de Rolagem Direita -->
+            <button class="btn-scroll btn-next" aria-label="Rolar para direita">›</button>
+        </section>
+
+    </main>
+
+    <!-- =========================================
+       3. RODAPÉ
+       ========================================= -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <a class="footer-brand" href="#inicio">
+            <img src="../imagens/logo-prisma-cursos.png" alt="Logo Prisma Cursos" class="logo-img">
+            <span>Prisma Cursos</span>
+          </a>
+          <p>Aprender abre caminhos.<br>Vamos descobrir o seu?</p>
+        </div>
+        <address>
+          <strong>Fale Conosco</strong>
+          <a href="mailto:prismacursos@contato.com.br">prismacursos@contato.com.br</a>
+          <a href="tel:+5561900000009">(61) 90000-0009</a>
+          <span>Instagram: @prisma_cursos</span>
+          <span>Facebook: prisma_cursos</span>
+        </address>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

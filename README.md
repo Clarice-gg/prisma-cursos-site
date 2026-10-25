@@ -11,6 +11,15 @@ Este repositório comporta o código-fonte do site institucional desenvolvido pa
 
 ---
 
+## Equipe / Integrantes
+* Andressa Vitória Gomes de Melo
+* Arthur Langamer de Oliveira Peixoto
+* Clarice Gitirana Gusson
+* Edvaldo Soares Brasileiro Filho
+* Murilo Abreu Nogueira
+
+---
+
 ## Problemas de Negócio Resolvidos
 O projeto foi estruturado para solucionar os seguintes desafios da instituição:
 * Ausência de um canal digital claro para apresentar o instituto, proposta e valores.
@@ -45,10 +54,13 @@ Para manter o código limpo e organizado pela equipe, o projeto segue a seguinte
 ├── src/
 │   ├── pages/       # Arquivos HTML das páginas do site
 │   ├── css/         # Arquivos de estilização (.css)
-│   └── js/          # Scripts de interatividade (.javascript)
+│   ├── js/          # Scripts de interatividade (.javascript)
+│   └── imagens/     # Imagens para importação nos arquivos HTML
 │
-└── README.md
+├── README.md
+└── CONTRIBUTING.md
 ```
+---
 
 ## Responsividade
 O layout foi planejado e construído com foco em **Desktop First** e responsividade, garantindo uma experiência fluida e adaptada para:
@@ -56,10 +68,3 @@ O layout foi planejado e construído com foco em **Desktop First** e responsivid
 * Telas de Computador (Desktop)
 * Tablets
 * Smartphones (Celulares)
-
-## Equipe / Integrantes
-* Andressa Vitória Gomes de Melo
-* Arthur Langamer de Oliveira Peixoto
-* Clarice Gitirana Gusson
-* Edvaldo Soares Brasileiro Filho
-* Murilo Abreu Nogueira

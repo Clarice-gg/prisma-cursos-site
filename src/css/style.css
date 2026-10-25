@@ -50,6 +50,18 @@ img {
   border: 0;
 }
 
+/*imagens*/
+.logo-img {
+    width: 40px;
+    height: 35px;
+    border-radius: 4px;
+}
+.coruja-img {
+    width: 260px;
+    height: auto;
+    border-radius: 8px;
+}
+
 /*botões*/
 .button {
   display: inline-flex;
@@ -71,6 +83,10 @@ img {
 .button-dark {
   color: var(--color-white);
   background: var(--color-ink);
+}
+.button-dark-blue {
+  color: var(--color-white);
+  background: var(--color-heading);
 }
 .button-outline {
   border-color: var(--color-border);
@@ -439,14 +455,12 @@ img {
   border-radius: 18px;
   background: var(--color-white);
 }
-
 .course-card > .course-category,
 .course-card > h3 {
   height: 180px;
   margin: 0;
   padding: 18px;
 }
-
 .course-card > .course-category {
   position: relative;
   display: flex;
@@ -579,15 +593,17 @@ img {
 }
 
 /*planos*/
-.plans { min-height: 647px; padding-top: 42px; padding-bottom: 50px; }
-
+.plans {
+  min-height: 647px;
+  padding-top: 42px;
+  padding-bottom: 50px;
+}
 .plan-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 34px;
   margin-top: 32px;
 }
-
 .plan-card {
   min-height: 400px;
   padding: 0 18px 18px;
@@ -604,7 +620,6 @@ img {
   padding: 18px;
   display: flex;
   align-items: flex-end;
-  overflow: hidden;
   background: #17827f;
   color: white;
   font: 700 22px/1.05 var(--font-heading);
@@ -633,9 +648,9 @@ img {
   font-size: 11px;
   line-height: 1.45;
 }
-
-.plan-details ul { padding-left: 16px; }
-
+.plan-card ul {
+  padding-left: 16px;
+}
 .plan-card .button {
   min-height: 38px;
   padding-inline: 16px;
@@ -732,4 +747,595 @@ img {
 }
 .footer-inner address strong {
   color: white;
+}
+
+
+/* =========================================
+   ESTILOS ESPECÍFICOS - PÁGINA "QUEM SOMOS"
+   ========================================= */
+
+/* 1. Hero / Banner Superior da página */
+.quem-somos-hero {
+    background: #e2f5f3;
+    border-radius: 25px;
+    padding: 50px 60px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.quem-somos-hero::after {
+    content: "";
+    position: absolute;
+    right: -40px;
+    top: -60px;
+    width: 280px;
+    height: 280px;
+    border: 1px solid rgba(77, 212, 205, 0.53);
+    border-radius: 50%;
+    box-shadow: 0 0 0 30px rgba(77, 212, 205, 0.12), 0 0 0 65px rgba(77, 212, 205, 0.08);
+}
+
+.quem-somos-hero .tag-pequena {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.45px;
+    color: #167d7c;
+    margin-bottom: 12px;
+}
+
+.ponto-verde {
+    width: 7px;
+    height: 7px;
+    background: var(--color-cyan);
+    border-radius: 50%;
+}
+
+.quem-somos-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--color-heading);
+    margin: 0 0 10px 0;
+}
+
+.quem-somos-hero p {
+    color: var(--color-muted);
+    font-size: 16px;
+    margin: 0;
+}
+
+/* 2. Apresentação */
+.quem-somos-apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 60px 0;
+}
+
+.textos-apresentacao {
+    max-width: 700px;
+}
+
+.destaque-principal {
+    font-family: var(--font-heading);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--color-ink);
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.texto-secundario {
+    font-size: 20px;
+    color: var(--color-ink);
+    line-height: 1.5;
+}
+
+/* 3. Grid de Missão e Valores */
+.missao-valores-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    margin: 60px 0;
+}
+
+.card-institucional {
+    background: #e2f5f3;
+    border-radius: 30px;
+    padding: 40px;
+    text-align: center;
+}
+
+.card-institucional h2 {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--color-heading);
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.card-institucional p {
+  font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--color-heading);
+    margin-bottom: 16px;
+}
+
+/* 4. Seção de Diferenciais ("Por que escolher a Prisma?") */
+.secao-diferenciais-qs {
+    text-align: center;
+    max-width: 900px;
+    margin: 80px auto 50px auto;
+}
+
+.secao-diferenciais-qs h2 {
+    font-family: var(--font-heading);
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--color-heading);
+    margin-bottom: 10px;
+}
+
+.linha-destaque {
+    width: 100%;
+    max-width: 700px;
+    height: 6px;
+    background: var(--color-cyan);
+    margin: 0 auto 20px auto;
+    opacity: 0.8;
+    transform: rotate(-1deg);
+}
+
+.subtitulo-diferenciais {
+    font-size: 20px;
+    color: var(--color-ink);
+    margin: 40px auto;
+}
+
+.bloco-argumentos {
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.8;
+    color: var(--color-ink);
+}
+
+.bloco-argumentos p {
+    margin-bottom: 24px;
+}
+
+.bloco-argumentos strong {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-ink);
+}
+
+/* 5. Gamificação botão */
+.cta-gamificacao-qs {
+    text-align: center;
+    margin: 60px 0 50px 0;
+    padding: 30px;
+}
+
+.cta-gamificacao-qs h2 {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--color-heading);
+    max-width: 800px;
+    margin: 0 auto 10px auto;
+    line-height: 1.3;
+}
+
+.linha-destaque-pequena {
+    width: 100%;
+    max-width: 650px;
+    height: 6px;
+    background: var(--color-cyan);
+    margin: 0 auto 20px auto;
+    opacity: 0.8;
+    transform: rotate(-1deg);
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+body {
+    overflow-x: hidden; /* Corta qualquer conteúdo que vazar para os lados */
+}
+
+/* Por padrão, no computador, o botão do menu fica invisível */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--color-ink);
+}
+
+/* Regras para Telas Menores (até 768px) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostra o botão no celular */
+    }
+
+    .nav-links {
+        display: none; 
+        position: absolute;
+        top: 82px;
+        left: 0;
+        width: 100%;
+        background: var(--color-page);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 30px;
+        border-bottom: 1px solid var(--color-border);
+        box-shadow: 0 10px 25px rgba(0, 27, 41, 0.08);
+        gap: 16px;
+    }
+
+    /* Classe que o JavaScript vai ativar para mostrar o menu */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .quem-somos-hero {
+      background: #e2f5f3;
+      border-radius: 25px;
+      padding: 40px 30px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 50px;
+    }
+    .quem-somos-hero h1 {
+        font-family: var(--font-heading);
+        font-size: 35px;
+        font-weight: 800;
+        color: var(--color-heading);
+        margin: 0 0 10px 0;
+    }
+    .quem-somos-hero::after {
+        content: "";
+        position: absolute;
+        right: -40px;
+        top: -60px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid rgba(77, 212, 205, 0.53);
+        border-radius: 50%;
+        box-shadow: 0 0 0 30px rgba(77, 212, 205, 0.12), 0 0 0 65px rgba(77, 212, 205, 0.08);
+    }
+
+    .quem-somos-apresentacao {
+        text-align: center;
+        gap: 20px;
+    }
+
+    .mascote-container img {
+        width: 180px;
+        margin: 0 auto;
+    }
+
+    .textos-apresentacao {
+        width: 100%;
+    }
+
+    .destaque-principal {
+        font-size: 20px;
+    }
+
+    .texto-secundario {
+        font-size: 15px;
+    }
+
+    .missao-valores-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 60px 0;
+    }
+
+    .card-institucional {
+        padding: 25px 50px;
+    }
+
+    .card-institucional h2 {
+        font-size: 26px;
+    }
+
+    .card-institucional p, 
+    .card-institucional strong {
+        font-size: 16px;
+    }
+
+    .bloco-argumentos {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--color-ink);
+    }
+
+    .cta-gamificacao-qs h2 {
+        font-family: var(--font-heading);
+        font-size: 26px;
+        font-weight: 800;
+        color: var(--color-heading);
+        max-width: 800px;
+        margin: 0 auto 10px auto;
+        line-height: 1.3;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font: 600 20px var(--font-heading);
+    }
+    .footer-brand img {
+      width: 38px;
+      height: 32px;
+      background: #eaf0ef;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .missao-valores-grid {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+/* =========================================
+   ESTILOS ESPECÍFICOS - PÁGINA EXPLORAR CURSOS
+   ========================================= */
+
+.pagina-cursos {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.titulo-cursos {
+    margin: 30px auto 40px 0;
+    text-align: left;
+}
+
+.titulo-cursos h1 {
+    font-family: var(--font-heading);
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--color-heading);
+    line-height: 1.2;
+}
+
+.secao-carrossel-cursos {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.grid-cursos-horizontal {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 320px;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 4px 20px 4px;
+    width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-cyan) transparent;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 0px;
+}
+
+.grid-cursos-horizontal::-webkit-scrollbar {
+    height: 8px;
+}
+.grid-cursos-horizontal::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+}
+.grid-cursos-horizontal::-webkit-scrollbar-thumb {
+    background: var(--color-cyan);
+    border-radius: 4px;
+}
+
+.btn-scroll {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 27, 41, 0.1);
+    transition: 0.2s ease;
+}
+
+.btn-scroll:hover {
+    background: var(--color-cyan);
+    border-color: var(--color-cyan);
+}
+
+.btn-prev {
+    left: -24px;
+}
+
+.btn-next {
+    right: -24px;
+}
+
+.card-curso {
+    background: var(--color-white);
+    border-radius: 18px;
+    border: 0.8px solid var(--color-border);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    scroll-snap-align: start;
+}
+
+.card-topo {
+    padding: 24px 20px;
+    position: relative;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-tag {
+    background: rgba(255, 255, 255, 0.88);
+    color: var(--color-ink);
+    padding: 4px 10px;
+    border-radius: 99px;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.card-topo h3 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.card-conteudo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.card-infos {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--color-muted);
+    margin-bottom: 8px;
+}
+
+.card-rating {
+    color: #B47914;
+    font-weight: 700;
+}
+
+.card-conteudo h4 {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--color-ink);
+    margin: 0 0 6px 0;
+}
+
+.card-conteudo p {
+    font-size: 12px;
+    color: var(--color-muted);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.card-professor {
+    border-top: 0.8px solid #edf2f1;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+}
+
+.avatar {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 10px;
+}
+
+/* Cores usadas para os cards */
+.bg-azul-escuro { background: var(--color-heading); color: var(--color-white); }
+.bg-cyan { background: var(--color-cyan); color: var(--color-ink); }
+.bg-verde-escuro { background: #167D7C; color: var(--color-white); }
+.bg-azul-claro { background: #d9ebf3; }
+.text-azul-escuro { color: var(--color-heading); }
+.bg-verde-claro { background: #d6f0ea; }
+.text-verde-escuro { color: #136E68; }
+.bg-laranja { background: #F8DFD0; }
+.text-vermelho { color: #A75035; }
+.bg-roxo { background: #E7DEF5; }
+.text-roxo-escuro { color: #5E4785; }
+
+.link-ativo {
+    font-weight: 900;
+    color: var(--color-ink);
+}
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--color-ink);
+    text-decoration: none;
+}
+.logo-img {
+    width: 40px;
+    height: 35px;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .grid-cursos-horizontal {
+    grid-auto-columns: 270px;
+    gap: 16px;
+  }
+  .card-curso {
+    height: 370px;
+  }
+  .card-topo h3 {
+    font-size: 19px;
+  }
+  .card-conteudo h4 {
+    font-size: 15px;
+  }
+  .card-conteudo p {
+    font-size: 11px;
+  }
+  .titulo-cursos h1 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .titulo-cursos h1 {
+    font-size: 40px;
+  }
 }
