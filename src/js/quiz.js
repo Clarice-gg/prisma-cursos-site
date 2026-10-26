@@ -1,12 +1,8 @@
-// =========================================
-// QUIZ DAS CARTAS (página quiz.html)
-// =========================================
 (function () {
     const codigo = document.getElementById('quiz-codigo');
-    const CODIGO_DESCONTO = 'PRISMA15'; // combinem o código real com o grupo
+    const CODIGO_DESCONTO = 'PRISMA15';
     const LETRAS = ['A', 'B', 'C'];
   
-    // "certa" = posição da resposta certa (0 = A, 1 = B, 2 = C)
     const perguntas = [
       {
         texto: 'Qual o foco da Prisma?',
@@ -74,19 +70,16 @@
       }
     }
   
-    // --- Ligando os cliques ---
     document.querySelectorAll('.quiz-carta').forEach(function (carta) {
       carta.addEventListener('click', function () {
         abrirPergunta(Number(carta.dataset.pergunta));
       });
     });
   
-    // Clicar no código mostra / esconde
     codigo.addEventListener('click', function () {
       codigo.textContent = (codigo.textContent === CODIGO_DESCONTO) ? '************' : CODIGO_DESCONTO;
     });
-  
-    // Esc volta para a página Quem Somos
+    
     document.addEventListener('keydown', function (evento) {
       if (evento.key === 'Escape') window.location.href = 'quem_somos.html';
     });
