@@ -4,13 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Cursos para aprender e desenvolver novas habilidades.">
-    <title>Prisma Cursos</title>
+    <title>Prisma Cursos | Login</title>
+
+    <!-- Fonte do letreiro "A luz no seu Aprendizado" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js" defer></script>
   </head>
   <body>
 
-   <header class="site-header">
+    <header class="site-header">
         <div class="main-nav">
             <a href="index.html" class="logo-link">
                 <img src="../imagens/logo-prisma-cursos.png" alt="Logo Prisma" class="logo-img"> Prisma
@@ -33,7 +39,48 @@
         </div>
     </header>
 
-    <!-- O restante da página (main, footer, etc.) continua aqui -->
+    <!-- Círculos decorativos -->
+    <span class="deco deco-topo"></span>
+    <span class="deco deco-topo-linha"></span>
+    <span class="deco deco-base-1"></span>
+    <span class="deco deco-base-2"></span>
+    <span class="deco deco-base-3"></span>
+
+    <main class="pagina">
+
+      <!-- Lado esquerdo: marca e slogan -->
+      <section class="marca">
+        <div class="logo">
+          <img src="../imagens/Logo-Prisma-Fundo-Removido.png" alt="Logo Prisma" class="logo-login">
+          <span class="logo-texto">Prisma</span>
+        </div>
+        <p class="slogan">A luz no seu Aprendizado</p>
+      </section>
+
+      <!-- Lado direito: card de login -->
+      <section class="area-card">
+        <div class="card">
+
+          <div class="painel-form">
+            <h1>Faça seu login*</h1>
+
+            <form action="#" method="post">
+              <label for="email">Seu e-mail*</label>
+              <input type="email" id="email" name="email" placeholder="nome@gmail.com" required>
+
+              <label for="senha">Sua senha*</label>
+              <input type="password" id="senha" name="senha" placeholder="*****" required>
+
+              <button type="submit">Acessar!</button>
+            </form>
+          </div>
+
+          <div class="painel-lateral"></div>
+
+        </div>
+      </section>
+
+    </main>
 
   </body>
 </html>
