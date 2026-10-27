@@ -1,0 +1,391 @@
+ :root {
+    --font-heading: "Manrope", Arial, sans-serif;
+    --font-body: "DM Sans", Arial, sans-serif;
+    --cor-azul: #333c77;
+    --cor-titulo: #426286;
+    --cor-botao: #426080;
+    --cor-ciano: #4dd4cd;
+    --cor-card: #d9d9d9;
+  }
+  
+  * { box-sizing: border-box; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  
+  .login-body {
+    --u: calc(min(100vw, 1600px) / 1440);
+    --m: calc(min(100vw, 440px) / 440);
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    background: #fff;
+    color: #000;
+    font-family: var(--font-body);
+  }
+  
+  .login-fundo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .login-fundo span { position: absolute; border-radius: 50%; }
+  
+  .login-bolha {
+    width: calc(330 * var(--m));
+    height: calc(330 * var(--m));
+    top: calc(-102 * var(--m));
+    right: calc(-91 * var(--m));
+    background: #e0f4f2;
+  }
+  .login-bolha-linha {
+    width: calc(300 * var(--m));
+    height: calc(300 * var(--m));
+    top: calc(-36 * var(--m));
+    right: calc(-144 * var(--m));
+    border: 1px solid rgba(60, 150, 210, 0.6);
+  }
+  .login-anel-externo {
+    width: calc(640 * var(--m));
+    height: calc(640 * var(--m));
+    left: calc(-320 * var(--m));
+    bottom: calc(-263 * var(--m));
+    background: rgba(77, 160, 220, 0.045);
+  }
+  .login-anel-interno {
+    width: calc(540 * var(--m));
+    height: calc(540 * var(--m));
+    left: calc(-270 * var(--m));
+    bottom: calc(-232 * var(--m));
+    background: rgba(77, 160, 220, 0.06);
+  }
+  
+  .login-hamburguer {
+    position: absolute;
+    top: calc(26 * var(--m));
+    right: calc(18 * var(--m));
+    z-index: 60;
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+    border: none;
+    background: none;
+    color: #000;
+    cursor: pointer;
+  }
+  .login-hamburguer svg { width: 100%; height: 100%; }
+  
+  .login-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+  }
+  
+  .login-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    width: min(max(190px, 51vw), 300px);
+    height: 72vh;
+    min-height: 320px;
+    padding: 58px 16px 24px 20px;
+    overflow-y: auto;
+    background: var(--cor-card);
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.25s, visibility 0.25s;
+  }
+  .login-menu ul { margin: 0; padding: 0; list-style: none; }
+  .login-menu a {
+    display: block;
+    padding: 7px 0;
+    color: var(--cor-botao);
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .login-menu .login-menu-pequeno {
+    color: var(--cor-azul);
+    font-size: 13px;
+    font-weight: 800;
+  }
+  .login-menu a:hover { text-decoration: underline; text-decoration-color: var(--cor-ciano); text-decoration-thickness: 3px; text-underline-offset: 5px; }
+  
+  .login-menu-aberto .login-overlay { opacity: 1; pointer-events: auto; }
+  .login-menu-aberto .login-menu { transform: none; visibility: visible; }
+  
+  .login-pagina {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    padding: calc(226 * var(--m)) calc(27 * var(--m)) calc(48 * var(--m));
+  }
+  
+  .login-marca { display: none; }
+  .login-card-lado { display: none; }
+  
+  .login-card {
+    position: relative;
+    width: calc(386 * var(--m));
+    max-width: 100%;
+  }
+  
+  .login-card-form {
+    position: relative;
+    padding: calc(69 * var(--m)) calc(37 * var(--m)) calc(90 * var(--m));
+    background: var(--cor-card);
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    border-radius: calc(38 * var(--m));
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .login-card-logo {
+    position: absolute;
+    top: calc(-32 * var(--m));
+    left: 50%;
+    width: calc(100 * var(--m));
+    transform: translateX(-50%);
+    mix-blend-mode: multiply;
+  }
+  
+  .login-titulo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: calc(60 * var(--m));
+    margin: 0 0 calc(77 * var(--m)) calc(13 * var(--m));
+    color: var(--cor-titulo);
+    font-family: var(--font-heading);
+    font-size: max(26px, calc(40 * var(--m)));
+    font-weight: 800;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  
+  .login-titulo::after {
+    content: "";
+    position: absolute;
+    top: calc(44 * var(--m));
+    left: calc(-13 * var(--m));
+    width: calc(330 * var(--m));
+    height: calc(8.4 * var(--m));
+    border-radius: 4px;
+    background: var(--cor-ciano);
+    opacity: 0.8;
+    transform: rotate(-2.39deg);
+  }
+  
+  .login-campo + .login-campo { margin-top: calc(16 * var(--m)); }
+  
+  .login-form label {
+    display: block;
+    margin: 0 0 2px calc(12 * var(--m));
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  
+  .login-form input {
+    display: block;
+    width: 100%;
+    height: max(36px, calc(36 * var(--m)));
+    padding: 0 calc(18 * var(--m));
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    border-radius: 38px;
+    background: #f8fbfa;
+    color: #000;
+    font-family: var(--font-body);
+    font-size: 16px;     
+  }
+  .login-form input::placeholder { color: #777; }
+  .login-form input:focus-visible,
+  .login-botao:focus-visible {
+    outline: 3px solid var(--cor-ciano);
+    outline-offset: 2px;
+  }
+  
+  .login-erro {
+    margin: 6px 0 0 calc(12 * var(--m));
+    color: #b3261e;
+    font-size: 13px;
+    line-height: 1.3;
+  }
+  
+  .login-botao {
+    display: block;
+    width: calc(224 * var(--m));
+    max-width: 100%;
+    height: max(40px, calc(41 * var(--m)));
+    margin: calc(45 * var(--m)) auto 0;
+    border: none;
+    border-radius: 999px;
+    background: var(--cor-botao);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
+  .login-botao:hover { filter: brightness(1.15); }
+  @media (min-width: 901px) {
+    .login-body { min-height: max(100vh, calc(880 * var(--u))); }
+  
+    .login-hamburguer,
+    .login-overlay,
+    .login-menu,
+    .login-card-logo { display: none; }
+  
+    .login-bolha {
+      width: calc(270 * var(--u));
+      height: calc(270 * var(--u));
+      top: calc(-93 * var(--u));
+      left: calc(1200 * var(--u));
+      right: auto;
+    }
+    .login-bolha-linha {
+      width: calc(340 * var(--u));
+      height: calc(340 * var(--u));
+      top: calc(-96 * var(--u));
+      left: calc(1249 * var(--u));
+      right: auto;
+    }
+    .login-anel-externo {
+      width: calc(806 * var(--u));
+      height: calc(806 * var(--u));
+      left: calc(-403 * var(--u));
+      top: calc(682 * var(--u));
+      bottom: auto;
+    }
+    .login-anel-interno {
+      width: calc(702 * var(--u));
+      height: calc(702 * var(--u));
+      left: calc(-351 * var(--u));
+      top: calc(733 * var(--u));
+      bottom: auto;
+    }
+  
+    .login-pagina {
+      position: absolute;
+      inset: 0;
+      display: block;
+      padding: 0;
+    }
+  
+    .login-marca {
+      position: absolute;
+      left: calc(81 * var(--u));
+      top: calc(165 * var(--u));
+      display: block;
+      width: calc(600 * var(--u));
+      text-align: center;
+    }
+    .login-logo-linha {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: calc(8 * var(--u));
+    }
+    .login-logo-linha img {
+      flex-shrink: 0;
+      width: calc(98 * var(--u));
+      mix-blend-mode: multiply;
+    }
+    .login-logo-linha span {
+      font-family: var(--font-heading);
+      font-size: max(34px, calc(60 * var(--u)));
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .login-slogan {
+      margin: calc(20 * var(--u)) 0 0;
+      color: var(--cor-azul);
+      font-family: var(--font-heading);
+      font-size: max(24px, calc(40 * var(--u)));
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      white-space: nowrap;
+    }
+  
+    .login-card {
+      position: absolute;
+      top: calc(210 * var(--u));
+      left: calc(805 * var(--u));
+      right: 0;
+      display: flex;
+      width: auto;
+      max-width: none;
+      height: calc(570 * var(--u));
+    }
+  
+    .login-card::before {
+      content: "";
+      position: absolute;
+      top: calc(60 * var(--u));
+      right: 0;
+      bottom: calc(-60 * var(--u));
+      left: calc(75 * var(--u));
+      z-index: -1;
+      border-radius: calc(30 * var(--u)) 0 0 calc(30 * var(--u));
+      background: linear-gradient(to right, #7b7b7b calc(412 * var(--u)), #1c1e3f calc(412 * var(--u)));
+      filter: blur(1px);
+    }
+  
+    .login-card-form {
+      flex-shrink: 0;
+      width: calc(412 * var(--u));
+      height: 100%;
+      padding: calc(90 * var(--u)) calc(42 * var(--u)) 0 calc(28 * var(--u));
+      border-radius: calc(30 * var(--u)) 0 0 calc(30 * var(--u));
+    }
+  
+    .login-card-lado {
+      display: block;
+      flex: 1;
+      background: var(--cor-azul);
+    }
+  
+    .login-titulo {
+      height: calc(60 * var(--u));
+      margin: 0 0 calc(69 * var(--u));
+      font-size: max(26px, calc(40 * var(--u)));
+    }
+    .login-titulo::after {
+      top: calc(46 * var(--u));
+      left: 0;
+      width: calc(376.7 * var(--u));
+      height: calc(8.4 * var(--u));
+    }
+  
+    .login-form {
+      width: calc(312 * var(--u));
+      margin-left: calc(30 * var(--u));
+    }
+    .login-campo + .login-campo { margin-top: calc(15 * var(--u)); }
+    .login-form label {
+      margin-left: calc(18 * var(--u));
+      font-size: max(12px, calc(14 * var(--u)));
+    }
+    .login-form input {
+      height: max(32px, calc(36 * var(--u)));
+      padding: 0 calc(18 * var(--u));
+      font-size: max(13px, calc(14 * var(--u)));
+    }
+    .login-erro { margin-left: calc(18 * var(--u)); }
+    .login-botao {
+      width: calc(223 * var(--u));
+      height: max(36px, calc(41 * var(--u)));
+      margin-top: calc(45 * var(--u));
+    }
+  }

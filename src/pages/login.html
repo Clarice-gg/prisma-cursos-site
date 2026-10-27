@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Prisma Cursos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body class="login-body">
+
+    <div class="login-fundo" aria-hidden="true">
+        <span class="login-bolha"></span>
+        <span class="login-bolha-linha"></span>
+        <span class="login-anel-externo"></span>
+        <span class="login-anel-interno"></span>
+    </div>
+
+    <button type="button" class="login-hamburguer" id="login-hamburguer" aria-label="Abrir menu" aria-expanded="false">
+        <svg viewBox="0 0 28 22" aria-hidden="true">
+            <path d="M2 3h24M2 11h24M2 19h24" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+        </svg>
+    </button>
+    <div class="login-overlay" id="login-overlay"></div>
+    <nav class="login-menu" id="login-menu" aria-label="Menu principal">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cursos.html">Explorar Cursos</a></li>
+            <li><a href="index.html#planos">Nossos Planos</a></li>
+            <li><a href="index.html#depoimentos">Depoimentos</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+            <li><a href="quem_somos.html" class="login-menu-pequeno">Quem Somos</a></li>
+            <li><a href="login.html" class="login-menu-pequeno">Entrar</a></li>
+            <li><a href="#" class="login-menu-pequeno">Cadastrar</a></li>
+        </ul>
+    </nav>
+
+    <main class="login-pagina">
+
+        <section class="login-marca">
+            <div class="login-logo-linha">
+                <img src="../imagens/logo-prisma-cursos.png" alt="">
+                <span>Prisma</span>
+            </div>
+            <p class="login-slogan">A luz no seu Aprendizado</p>
+        </section>
+
+        <section class="login-card">
+            <div class="login-card-form">
+                <img class="login-card-logo" src="../imagens/logo-prisma-cursos.png" alt="Prisma Cursos">
+
+                <h1 class="login-titulo">Faça seu login*</h1>
+
+                <form class="login-form" id="login-form" novalidate>
+                    <div class="login-campo">
+                        <label for="login-email">Seu e-mail*</label>
+                        <input type="email" id="login-email" name="email" placeholder="nome@gmail.com" autocomplete="email">
+                    </div>
+                    <div class="login-campo">
+                        <label for="login-senha">Sua senha*</label>
+                        <input type="password" id="login-senha" name="senha" placeholder="******" autocomplete="current-password">
+                    </div>
+                    <p class="login-erro" id="login-erro" role="alert"></p>
+                    <button type="submit" class="login-botao">Acessar!</button>
+                </form>
+            </div>
+
+            <div class="login-card-lado" aria-hidden="true"></div>
+        </section>
+    </main>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>
