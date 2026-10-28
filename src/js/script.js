@@ -7,37 +7,37 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Seleciona o botão do menu e a lista de links
+// ==========================================
+// CONTROLE DO MENU HAMBÚRGUER (MOBILE)
+// ==========================================
 const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
 const navMenu = document.querySelector('.nav-menu');
-// Quando o usuário clicar no botão...
-if (menuToggle && navLinks) {
+const navLinks = document.querySelector('.nav-links');
+
+if (menuToggle) {
     menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+        if (navMenu) {
+            navMenu.classList.toggle('active');
+        }
+        if (navLinks) {
+            navLinks.classList.toggle('active');
+        }
+
+        // Alterna o ícone do botão
+        const isOpen = (navMenu && navMenu.classList.contains('active')) || (navLinks && navLinks.classList.contains('active'));
+        menuToggle.textContent = isOpen ? '✕' : '☰';
+    });
+
+    // Fecha o menu ao clicar em qualquer link
+    const todosOsLinks = document.querySelectorAll('.nav-menu a, .nav-links a');
+    todosOsLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navMenu) navMenu.classList.remove('active');
+            if (navLinks) navLinks.classList.remove('active');
+            menuToggle.textContent = '☰';
+        });
     });
 }
-
-if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        if (navMenu.classList.contains('active')) {
-            menuToggle.textContent = '✕';
-        } else {
-            menuToggle.textContent = '☰';
-        }
-    });
-}
-
-const menuLinks = document.querySelectorAll('.nav-menu a');
-menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        if (menuToggle) {
-            menuToggle.textContent = '☰';
-        }
-    });
-});
 
 // Funcionalidade de rolagem horizontal com as setinhas na página de cursos
 const cursosScroll = document.getElementById('cursosScroll');
@@ -119,6 +119,6 @@ const formLogin = document.getElementById("form-login");
 if (formLogin) {
   formLogin.addEventListener("submit", function (event) {
     event.preventDefault();             
-    window.location.href = "index.html"; 
+    window.location.href = "../../index.html"; 
   });
 }
