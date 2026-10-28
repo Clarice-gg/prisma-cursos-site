@@ -112,3 +112,13 @@ if (searchForm && searchInput) {
         searchInput.value = "";
     });
 }
+
+//Redirecionamento após o login
+const formLogin = document.getElementById("form-login");
+
+if (formLogin) {
+  formLogin.addEventListener("submit", function (event) {
+    event.preventDefault();             
+    window.location.href = "index.html"; 
+  });
+}
