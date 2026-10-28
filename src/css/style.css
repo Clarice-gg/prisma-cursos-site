@@ -782,14 +782,7 @@ textarea {
     align-items: center;
     gap: 32px;
 }
-.nav-links {
-    display: flex;
-    gap: 24px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-}
+
 .account-actions {
     display: flex;
     align-items: center;
@@ -840,20 +833,6 @@ textarea {
     }
     .nav-menu.active {
         display: flex;
-    }
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        padding: 0;
-        margin: 0 0 20px 0;
-        list-style: none;
-    }
-    .nav-links a {
-        font-size: 16px;
-        font-weight: 600;
-        color: var(--color-ink);
-        text-decoration: none;
     }
     .account-actions {
         display: flex;
@@ -1195,7 +1174,7 @@ body {
     .nav-links {
         display: none; 
         position: absolute;
-        top: 82px;
+        top: 100%;
         left: 0;
         width: 100%;
         background: var(--color-page);
@@ -1205,11 +1184,24 @@ body {
         border-bottom: 1px solid var(--color-border);
         box-shadow: 0 10px 25px rgba(0, 27, 41, 0.08);
         gap: 16px;
+        list-style: none;
+        box-sizing: border-box;
+        z-index: 999;
     }
-
     /* Classe que o JavaScript vai ativar para mostrar o menu */
     .nav-links.active {
         display: flex;
+    }
+    .nav-links a {
+        font-family: var(--font-heading, sans-serif);
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--color-ink, #001B29);
+        text-decoration: none;
+        padding-left: 8px;
+    }
+    .nav-links a:hover {
+        color: var(--color-heading, #333C77);
     }
 
     .quem-somos-hero {
@@ -1774,4 +1766,160 @@ body {
   .painel-form form { width: 100%; margin-left: 0; }
 
   .area-card::after { left: 20px; bottom: -20px; background: #7b7b7b; }
+/* =========================================
+   ESTILOS ESPECÍFICOS DA PÁGINA DE CADASTRO
+   ========================================= */
+
+body.pagina-cadastro {
+    background: #bae1ff;
+}
+.cadastro-main {
+    padding: 40px 0px 80px 20px;
+}
+.cadastro-header-section {
+    margin-bottom: 30px;
+}
+.cadastro-title {
+    font-family: var(--font-heading);
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--color-heading);
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
+.cadastro-subtitle {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-heading);
+    letter-spacing: 0.5px;
+}
+.cadastro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+.cadastro-card-form {
+    background: var(--color-white);
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    padding: 36px;
+    box-shadow: 0 10px 30px rgba(0, 27, 41, 0.04);
+}
+.cadastro-form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-ink);
+    margin-bottom: 6px;
+}
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    font-size: 14px;
+    outline: none;
+    font-family: var(--font-body);
+    background: var(--color-white);
+    box-sizing: border-box;
+}
+.form-group input:focus {
+    border-color: var(--color-cyan);
+    box-shadow: 0 0 0 3px rgba(77, 212, 205, 0.15);
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.erro-texto {
+    font-size: 11px;
+    color: #d52b45;
+    margin-top: 4px;
+    font-weight: 600;
+}
+.cadastro-submit-btn {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+    background: var(--color-cyan);
+    color: var(--color-ink);
+    border-radius: 999px;
+    padding: 14px;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+}
+.cadastro-submit-btn:hover {
+    opacity: 0.9;
+}
+.cadastro-illustrations {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+    position: relative;
+}
+.cards-coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  z-index: 2;
+}
+.illustrative-card {
+    background: var(--color-white);
+    padding: 18px 24px;
+    border-radius: 16px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 8px 20px rgba(0, 27, 41, 0.05);
+    width: 160px;
+    box-sizing: border-box;
+}
+.card-tecn {transform: translateX(15px);}
+.card-des {transform: translateX(-15px);}
+.card-ges {transform: translateX(10px);}
+
+.card-title-ill {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--color-heading);
+}
+.card-bar {
+    width: 70px;
+    height: 7px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    margin-top: 6px;
+}
+.imagem-principal-wrapper {
+    max-width: 380px;
+    z-index: 1;
+}
+.img-notebook-livros {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .cadastro-grid {
+        grid-template-columns: 1fr;
+    }
+    .cadastro-illustrations {
+        display: none;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
 }
