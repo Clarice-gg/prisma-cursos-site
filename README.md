@@ -57,6 +57,7 @@ Para manter o código limpo e organizado pela equipe, o projeto segue a seguinte
 │   ├── js/          # Scripts de interatividade (.javascript)
 │   └── imagens/     # Imagens para importação nos arquivos HTML
 │
+├── index.html       # Página inicial da plataforma
 ├── README.md
 └── CONTRIBUTING.md
 ```
