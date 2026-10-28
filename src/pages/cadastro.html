@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crie sua conta na PrismaCursos e comece sua jornada de aprendizado.">
+
+    <title>Criar Conta | Prisma Cursos</title>
+
+    <!-- Importação das fontes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Link para o CSS central do projeto -->
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/scriptcadastro.js" defer></script>
+</head>
+
+<body class="pagina-cadastro">
+    <!-- CABEÇALHO / MENU DE NAVEGAÇÃO COM MENU COLAPSÁVEL -->
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Navegação principal">
+            
+            <a href="index.html" class="logo-link">
+                <img src="../imagens/logo-prisma-cursos.png" alt="Logo Prisma" class="logo-img"> Prisma
+            </a>
+
+            <!-- Botão do Menu (Mobile) -->
+            <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+            <!-- Container Colapsável -->
+            <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cursos.html">Explorar cursos</a></li>
+                    <li><a href="index.html#planos">Nossos Planos</a></li>
+                    <li><a href="index.html#depoimentos">Depoimentos</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <li><a href="quem_somos.html">Quem Somos</a></li>
+                    <li><a href="login.html">Entrar</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL (CADASTRO) -->
+    <main class="content-width cadastro-main">
+
+        <!-- Título da Seção -->
+        <section class="cadastro-header-section">
+            <h1 class="cadastro-title">CRIE SUA CONTA</h1>
+            <p class="cadastro-subtitle">SUA PRÓXIMA CONQUISTA COMEÇA AQUI.</p>
+        </section>
+
+        <!-- Grid: Formulário à Esquerda / Cards Decorativos à Direita -->
+        <div class="cadastro-grid">
+            
+            <!-- Card do Formulário -->
+            <div class="cadastro-card-form">
+                <form id="formCadastro" novalidate class="cadastro-form-content">
+                    
+                    <div class="form-group">
+                        <label for="nome">Nome completo</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome completo"
+                            autocomplete="name"
+                            required
+                        >
+                        <small id="erroNome" class="erro-texto"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            autocomplete="email"
+                            required
+                        >
+                        <small id="erroEmail" class="erro-texto"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="(00) 00000-0000"
+                            autocomplete="tel"
+                            maxlength="15"
+                            required
+                        >
+                        <small id="erroTelefone" class="erro-texto"></small>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input
+                                type="password"
+                                id="senha"
+                                name="senha"
+                                placeholder="Crie uma senha"
+                                autocomplete="new-password"
+                                required
+                            >
+                            <small id="erroSenha" class="erro-texto"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmarSenha">Confirmar senha</label>
+                            <input
+                                type="password"
+                                id="confirmarSenha"
+                                name="confirmarSenha"
+                                placeholder="Confirme sua senha"
+                                autocomplete="new-password"
+                                required
+                            >
+                            <small id="erroConfirmarSenha" class="erro-texto"></small>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="button button-primary cadastro-submit-btn">
+                        Criar minha conta
+                    </button>
+
+                    <p id="mensagem" role="status" aria-live="polite" style="text-align: center; font-weight: 700; margin-top: 12px; font-size: 13px;"></p>
+                </form>
+            </div>
+
+            <!-- Lado direito -->
+            <div class="cadastro-illustrations">
+                <div class="cards-coluna">
+                    <div class="illustrative-card card-tecn">
+                        <span class="card-title-ill">Tecnologia</span>
+                        <div class="card-bar"></div>
+                    </div>
+
+                    <div class="illustrative-card card-des">
+                        <span class="card-title-ill">Design</span>
+                        <div class="card-bar"></div>
+                    </div>
+
+                    <div class="illustrative-card card-ges">
+                        <span class="card-title-ill">Gestão</span>
+                        <div class="card-bar"></div>
+                    </div>
+                </div>
+
+                <div class="imagem-principal-wrapper">
+                    <img src="../imagens/computador-cadastro.png" alt="Ilustração de estudos" class="img-notebook-livros">
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- RODAPÉ INSTITUCIONAL -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <a class="footer-brand" href="index.html">
+            <img src="../imagens/logo-prisma-cursos.png" alt="Logo Prisma Cursos" class="logo-img">
+            <span>Prisma Cursos</span>
+          </a>
+          <p>Aprender abre caminhos.<br>Vamos descobrir o seu?</p>
+        </div>
+        <address>
+          <strong>Fale Conosco</strong>
+          <a href="mailto:prismacursos@contato.com.br">prismacursos@contato.com.br</a>
+          <a href="tel:+5561900000009">(61) 90000-0009</a>
+          <span>Instagram: @prisma_cursos</span>
+          <span>Facebook: prisma_cursos</span>
+        </address>
+      </div>
+    </footer>
+
+    <!-- Script JavaScript central -->
+    <script src="../js/scriptcadastro.js"></script>
+</body>
+</html>
