@@ -1637,8 +1637,8 @@ body {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 286px 1fr;
-  width: 760px;
+  grid-template-columns: 380px 1fr;
+  width: 860px;
   height: 396px;
   border-radius: 22px;
   overflow: hidden;
@@ -1656,12 +1656,12 @@ body {
   top: 60px;
   bottom: -40px;
   border-radius: 0 0 22px 22px;
-  background: linear-gradient(90deg, #7b7b7b 0 286px, #1b1b3a 286px 100%);
+  background: linear-gradient(90deg, #7b7b7b 0 380px, #1b1b3a 380px 100%);
 }
 
 .painel-form {
   background: #d9d9d9;
-  padding: 56px 0 0 20px;
+  padding: 56px 0 0 24px;
 }
 
 .painel-lateral {
@@ -1671,7 +1671,7 @@ body {
 .painel-form h1 {
   position: relative;
   width: max-content;
-  margin: 0 0 0 -2px;
+  margin: 0 0 0 50px;
   padding-bottom: 6px;
   font-weight: 800;
   font-size: 32px;
@@ -1693,14 +1693,14 @@ body {
 
 /*  Formulário  */
 .painel-form form {
-  width: 220px;
+  width: 280px;
   margin: 56px 0 0 20px;
 }
 
 .painel-form label {
   display: block;
   margin: 0 0 3px 12px;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
   color: #111;
 }
@@ -1714,7 +1714,7 @@ body {
   border-radius: 14px;
   background: #f8f8f8;
   font-family: inherit;
-  font-size: 9px;
+  font-size: 12px;
   color: #333;
   outline: none;
   transition: border-color .2s, box-shadow .2s;
@@ -1738,7 +1738,7 @@ body {
   border-radius: 16px;
   background: #43607f;
   font-family: inherit;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 600;
   color: #fff;
   cursor: pointer;
@@ -1767,11 +1767,44 @@ body {
     width: min(340px, 100%);
     height: auto;
     padding-bottom: 40px;
+    background: #d9d9d9;
   }
 
   .painel-lateral { display: none; }
-  .painel-form { padding: 40px 24px 0; }
+  .painel-form {
+    height: 100%;
+    padding: 40px 24px;
+    box-sizing: border-box;
+  }
+  .painel-form h1 { margin: 0 10px 20px; }
   .painel-form form { width: 100%; margin-left: 0; }
 
-  .area-card::after { left: 20px; bottom: -20px; background: #7b7b7b; }
+  .area-card::after { display: none; }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .pagina {
+        justify-content: center;
+    }
+    .card {
+        width: 480px;
+        height: 440px;
+    }
+    .painel-form {
+        padding: 50px 40px;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    .painel-form form {
+        width: 100%;
+        margin-left: 0;
+    }
+    .painel-form label { font-size: 15px; }
+    .painel-form input { height: 30px; font-size: 13px; margin-bottom: 20px; }
+    .painel-form button { width: 170px; height: 32px; font-size: 14px; }
+    .logo-login {height: 110px;}
+    .logo-texto {font-size: 52px;}
+    .slogan {font-size: 42px;}
+    .marca {margin-top: 60px;}
+    .painel-form h1 { margin: 0 85px 20px; }
 }
